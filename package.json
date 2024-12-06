@@ -1,0 +1,26 @@
+{
+  "name": "transcription-translation-api",
+  "version": "1.0.0",
+  "description": "A simple Node.js API for audio/video transcription and text translation.",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "transcription",
+    "translation",
+    "api"
+  ],
+  "author": "lcsolmedosilva@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.7"
+  }
+}
