@@ -1,4 +1,4 @@
-import { ProcessFileFactory } from "../services/processFileService.js";
+import { ProcessFileFactory } from "../services/processFileFactory.js";
 
 const process = async (req, res) => {
     try {
@@ -9,7 +9,8 @@ const process = async (req, res) => {
             throw new Error("No file uploaded");
         }
 
-        const result = ProcessFileFactory(file, targetLanguage);
+        const processFileFactory = ProcessFileFactory(file, targetLanguage);
+        const result = await processFileFactory.process();
 
         res.send(result);
 
