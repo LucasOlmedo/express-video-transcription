@@ -7,9 +7,11 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+app.use(
+    cors(),
+    express.json({ limit: '100mb' }),
+    express.urlencoded({ extended: true, limit: '100mb' })
+);
 
 app.use(transcriptionRoute);
 
